@@ -12,55 +12,6 @@ backend_mapping = {
 }
 process: callable = None
 
-# 增加指令
-#@operator_class(name="comfyui", help="comfyui random/status/switch", privilege=1)
-#class SwitchVoicePlugin(CommandOperator):
-#
-#    # 控制语音合成的开关
-#    async def execute(self, context: entities.ExecuteContext) -> typing.AsyncGenerator[entities.CommandReturn, None]:
-#        global ifVoice
-#        global language
-#
-#        if context.crt_params[0] == "on":
-#            self.ap.logger.info("启动语音合成")
-#            ifVoice = True
-#            yield entities.CommandReturn(text="启动语音合成")
-#
-#        elif context.crt_params[0] == "off":
-#            self.ap.logger.info("关闭语音合成")
-#            ifVoice = False
-#            yield entities.CommandReturn(text="关闭语音合成")
-#
-#        elif context.crt_params[0] == "status":
-#            if ifVoice:
-#                yield entities.CommandReturn(text="语音合成状态:已开启" + f"，当前语言为{language}")
-#            else:
-#                yield entities.CommandReturn(text="语音合成状态:已关闭")
-#
-#        elif context.crt_params[0] == "language":
-#
-#            reply = "语言列表：\n 中文  英文    日文"
-#                    
-#
-#            yield entities.CommandReturn(text=reply.strip())
-#
-#        elif context.crt_params[0] == "switch":
-#           
-#           language = context.crt_params[1]
-#           self.ap.logger.info(f"切换语音合成语言为{language}")
-#           yield entities.CommandReturn(text=f"切换语音合成语言为{language}")
-#
-#        elif context.crt_params[0] == "帮助":
-#            yield entities.CommandReturn(text="vits插件支持的指令有：\n"
-#                                              "!vits on\n"
-#                                              "!vits off\n"
-#                                              "!vits status\n"
-#                                              "!vits language\n"
-#                                              "!vits switch\n"
-#                                              "!vits help\n")
-#
-#        else:
-#            yield entities.CommandReturn(error="无效指令，请输入\"!vits help\"查看帮助")
 
 
 # 注册插件
